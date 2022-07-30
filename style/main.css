@@ -3,11 +3,11 @@ body {
     flex-direction: column;
     margin: 0px;
     font-family: 'Segoe UI','SYHT-Normal';
-    background-color: var(--bright-color);
+    background-color: var(--dark-color);
 }
 :root {
     --dark-color: rgb(32, 32, 32);
-    --bright-color: rgb(224,224,224);
+    --bright-color: rgb(233,233,233);
 }
 .navbar {
     height: 5%;
@@ -20,19 +20,13 @@ body {
     justify-content: flex-end;
 }
 .sec-1-img {
-    font-size: 400px;
-    animation: sec1-img-in-ani 2s ease-in-out;
-    animation-fill-mode: forwards;
-    background-color: transparent;
+    z-index: 1;
 }
 @keyframes sec1-img-in-ani {
     from { padding-right: 100px; };
     to { padding-right: -50px; };
 }
-@keyframes sec1-txt-in-ani {
-    from { opacity: 0%; };
-    to { opacity: 100%; };
-}
+
 .sec-1-txt {
     font-size: 64px;
     font-family: 'SYHT-Med';
@@ -43,27 +37,247 @@ body {
     padding-right: 20px;
     color: var(--bright-color);
 }
+.vertical_poster{
+    text-align: center;
+    width: 50%;
+}
+
+.m-0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.m-desc {
+    transition: all 0.5s ease-in-out;
+}
+.m--1{
+    font-family: 'simsun';
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 50px;
+    animation: a-ani 0.7s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes a-ani {
+    from { opacity: 80%; };
+    to { opacity: 100%; };
+}
+.sec-1-down {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
 section {
     background-color: var(--dark-color);
+    color: var(--dark-color);
+}
+.sec-2-lst {
+    border-color: var(--dark-color);
+    border-width: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    width: fit-content;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-right: 200px;
+    padding-left: 200px;
+    height: auto;
+    bottom: 0;
+}
+.sec-3-name {
+    display: inline;
+    font-family: 'SYHT-Med';
+    font-size: 25px;
+}
+.sec-3-btn {
+    display: inline;
+    background: white;
+    border-color: var(--dark-color);
+    border-radius: 5px;
+    margin-right: 20px;
+    font-family: "SYHT-Med";
+    padding: 15px;
+    opacity: 0%;
+    border-width: 3px;
+    color:var(--dark-color);
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: translateX(30px);
+}
+.sec-3-btn:not(svg span) :hover  {
+    background: var(--dark-color);
     color: var(--bright-color);
+    transition: all 0.4s ease-in-out;
+}
+.sec-3-btn:hover {
+    background: var(--dark-color);
+    transition: all 0.4s ease-in-out;
+}
+.sec-3-btn svg{
+    transition: all 0.4s ease-in-out;
+}
+.sec-3-btn span{
+    transition: all 0.4s ease-in-out;
+}
+.sec-3-btn:hover svg {
+    transform: translateX(200%) scale(1.5);
+    color: var(--bright-color);
+    transition: all 0.4s ease-in-out;
+}
+.sec-3-btn:hover span {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.sec-3-btnbox {
+    display: inline;
+    padding: 15px;
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left-color: var(--dark-color);
+    border-left-style: solid;
+    border-left-width: 4px;
+}
+.sec-3-lst {
+    border-color: var(--dark-color);
+    border-width: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    width: fit-content;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 80px;
+    padding-left: 80px;
+    height: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+.sec-3-names {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.sec-2-li div {
+    display: inline;
+}
+.sec-2-tit div {
+    font-family: "SYHT-Normal";
+    font-size: 30px;
+}
+.sec-2-li {
+    padding-top: 60px;
+    transform: translateX(20px);
+    transition: all 0.75s ease-out;
+    opacity: 0%
+}
+.sec-3-li {
+    transform: translateX(20px);
+    transition: all 0.75s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+.sec-2-lst-time {
+    font-family: "SYHT-Light";
+    font-size: 30px;
+    padding-right: 60px;
+}
+.sec-2-lst-desc {
+    font-family: "SYHT-Normal";
+    font-size: 30px;
+}
+.blur-hover {
+    position: absolute;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.sec-2-tit {
+    font-family: "SYHT-Med";
+    font-size: 50px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.sec-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing:content-box;
+    justify-content: space-evenly;
+    background-image: url("../img/back5.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.wf-logo {
+    width: 50px;
+    filter: invert(100%);
 }
 .sec-1 {
-    height: 90%;
-    flex-direction: row;
+    height: 100%;
+    background-image: url('../img/back.png');
+    background-position: center center;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction:column;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    animation:back-ani 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes back-ani {
+    from { background-position: 60% 60%;background-size:250%;  };
+    to { background-position: 40% 40%;background-size:300%; };
 }
 .sec-d {
     height: 5%;
     text-align: center;
 }
-.page-down-icn {
-    /*animation: paged-ani 1s ease-in-out 0s infinite alternate;*/
+.m-1 {
+    font-family: 'SYHT-Bold';
+    font-size: 130px;
+    font-weight: bold;
 }
-@keyframes paged-ani {
-    from { opacity: 0.5;padding-top: 0px; }
-    to { opacity: 1;padding-top: 0.75%; }
+.main-title {
+    animation: t-ani 3s ease-in-out;
+}
+@keyframes t-ani {
+    from { opacity: 0%;padding-bottom: 100px; };
+    to { opacity: 100%;padding-bottom: 0px; };
+}
+.m-2 {
+    font-family: 'SYHT-Light';
+    font-size: 70px;
+}
+.m-3{
+    font-family: 'SYHT-Med';
+    font-size: 80px;
+}
+.m-4{
+    font-family: 'SYHT-Light';
+    font-size: 20px;
+    animation: m-4-ani 3s ease-in;
+    padding-top: 100px;
+    animation-fill-mode: forwards;
+}
+@keyframes m-4-ani {
+    from { opacity: 0%;};
+    to { opacity: 0.01;};
 }
 @font-face {
     font-family:SYHT-Normal;
@@ -72,4 +286,12 @@ section {
 @font-face {
     font-family:SYHT-Med;
     src:url("../fonts/Med.otf");
+}
+@font-face {
+    font-family:SYHT-Bold;
+    src:url("../fonts/Bold.otf");
+}
+@font-face {
+    font-family:SYHT-Light;
+    src:url("../fonts/Light.otf");
 }
