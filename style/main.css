@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    font-family: 'Segoe UI','SYHT-Normal';
+    background-color: var(--bright-color);
+}
+:root {
+    --dark-color: rgb(32, 32, 32);
+    --bright-color: rgb(224,224,224);
+}
+.navbar {
+    height: 5%;
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+.sec-1-img {
+    font-size: 400px;
+    animation: sec1-img-in-ani 2s ease-in-out;
+    animation-fill-mode: forwards;
+    background-color: transparent;
+}
+@keyframes sec1-img-in-ani {
+    from { padding-right: 100px; };
+    to { padding-right: -50px; };
+}
+@keyframes sec1-txt-in-ani {
+    from { opacity: 0%; };
+    to { opacity: 100%; };
+}
+.sec-1-txt {
+    font-size: 64px;
+    font-family: 'SYHT-Med';
+    animation: sec1-txt-in-ani 4s ease-in-out;
+}
+.navbar-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--bright-color);
+}
+section {
+    background-color: var(--dark-color);
+    color: var(--bright-color);
+}
+.sec-1 {
+    height: 90%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sec-d {
+    height: 5%;
+    text-align: center;
+}
+.page-down-icn {
+    /*animation: paged-ani 1s ease-in-out 0s infinite alternate;*/
+}
+@keyframes paged-ani {
+    from { opacity: 0.5;padding-top: 0px; }
+    to { opacity: 1;padding-top: 0.75%; }
+}
+@font-face {
+    font-family:SYHT-Normal;
+    src:url("../fonts/Normal.otf");
+}
+@font-face {
+    font-family:SYHT-Med;
+    src:url("../fonts/Med.otf");
+}
