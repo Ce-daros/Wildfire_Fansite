@@ -50,7 +50,7 @@ const chmlist = async (n) => {
 const ckscroll2 = async () => {
     await sleep(500);
     lists3 = document.getElementsByClassName("sec-4-li");
-    if(scrollY>=3800){
+    if(scrollY>=3700){
         for(var i=0;i<lists3.length;i++){
             lists3[i].style.transform="translateX(0px)";
             lists3[i].style.opacity="1";
