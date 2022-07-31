@@ -3,7 +3,8 @@ body {
     flex-direction: column;
     margin: 0px;
     font-family: 'Segoe UI','SYHT-Normal';
-    background-color: var(--dark-color);
+    background-color: white;
+    color: white;
 }
 :root {
     --dark-color: rgb(32, 32, 32);
@@ -18,6 +19,75 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     justify-content: flex-end;
+}
+.ikia-sec {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.isec-left {
+    background-image: url("../img/ikia.png");
+    width: 50%;
+    background-position: center center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+.isec-left:hover{
+    background-size: 150%;
+    transition: all 1s ease-in-out;
+}
+.isec-left:hover .isec-l1{
+    font-size: 80px;
+    transition: all 1s ease-in-out;
+}
+.isec-right:hover{
+    background-size: 120%;
+    transition: all 1s ease-in-out;
+}
+.isec-right:hover .isec-l1{
+    font-size: 80px;
+    transition: all 1s ease-in-out;
+}
+.isec-right {
+    background-image: url("../img/ikia2.png");
+    width: 50%;
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+}
+.blur-hover-2 {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    top: 200vh;
+    width: 100%;
+    height: 50vh;
+    z-index: 0;
+}
+.isec-l1 {
+    z-index: 1;
+    font-family: "SYHT-Bold";
+    font-size: 65px;
+    transition: all 1s ease-in-out;
+}
+.isec-l2 {
+    z-index: 1;
+    padding-top: 50px;
+    font-family: "SYHT-Light";
+    font-size: 35px;
+    transition: all 1s ease-in-out;
 }
 .sec-1-img {
     z-index: 1;
@@ -76,6 +146,36 @@ body {
 section {
     background-color: var(--dark-color);
     color: var(--dark-color);
+}
+.sec-0 {
+    height: 100%;
+    background-image: url("../img/Wildfire.png");
+    background-size: 100%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: bg-ani 10s ease-in-out 0s infinite alternate;
+}
+@keyframes bg-ani {
+    from {
+        background-size: 90%;
+    }
+    to {
+        background-size: 150%;
+    }
+}
+.sec-2-lst {
+    border-color: var(--dark-color);
+    border-width: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    width: fit-content;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-right: 200px;
+    padding-left: 200px;
+    height: auto;
+    bottom: 0;
 }
 .sec-2-lst {
     border-color: var(--dark-color);
@@ -145,6 +245,21 @@ section {
     border-left-style: solid;
     border-left-width: 4px;
 }
+.sec-4-lst {
+    border-color: var(--dark-color);
+    border-width: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    transition: all 0.5s ease-in-out;
+    width: fit-content;
+    justify-content: space-evenly;
+    min-height: 400px;
+    min-width: 400px;
+    height: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
 .sec-3-lst {
     border-color: var(--dark-color);
     border-width: 5px;
@@ -176,16 +291,50 @@ section {
     font-size: 30px;
 }
 .sec-2-li {
-    padding-top: 60px;
+    padding-top: 40px;
+    font-family: "SYHT-Light";
     transform: translateX(20px);
     transition: all 0.75s ease-out;
     opacity: 0%
 }
 .sec-3-li {
-    transform: translateX(20px);
+    font-family: "SYHT-Light";
     transition: all 0.75s ease-out;
     display: flex;
     flex-direction: column;
+}
+.sec-4-tabs {
+    font-family: "SYHT-Med";
+    font-size: 20px;
+    display: flex;
+    padding-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.sec-4-tab {
+    font-family: "SYHT-Med";
+    font-size: 20px;
+    padding-right: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.sec-4-tab:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.sec-4-li {
+    transform: translateX(-30px);
+    font-family: "SYHT-Light";
+    transition: all 0.5s ease-out;
+    display: flex;
+    opacity: 0;
+    flex-direction: row;
+    align-items: center;
+}
+.sec-4-li svg{
+    transition: all 1s ease-in-out;
+}
+.sec-4-li svg:hover {
+    transform: rotate(360deg) scale(1.2);
+    transition: all 0.5s ease-in-out;
 }
 .sec-2-lst-time {
     font-family: "SYHT-Light";
@@ -204,21 +353,32 @@ section {
     z-index: 0;
 }
 .sec-2-tit {
-    font-family: "SYHT-Med";
+    font-family: "SYHT-Bold";
     font-size: 50px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-bottom: 15px;
 }
+.play-icon {
+    display: inline;
+}
+.sec-4-lst-desc {
+    font-family: "SYHT-Normal";
+    font-size: 30px;
+    padding-left: 50px;
+
+    display: inline;
+}
+
 .sec-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 90%;
     box-sizing:content-box;
     justify-content: space-evenly;
     background-image: url("../img/back5.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-attachment: fixed;
     background-size: 100%;
 }

@@ -3,8 +3,13 @@
     <head>
         <link rel="stylesheet" type="text/css" href="./style/main.css">
         <script src="./script/main.js"></script>
+        <link rel="shortcut icon" href="./favicon.ico">
+        <title>Wildfire Fan site</title>
     </head>
     <body>
+        <section class="sec-0">
+
+        </section>
         <section class="sec-1">
             <div class="blur-hover"></div>
             <div class="navbar-but" style="display: none;">
@@ -34,11 +39,29 @@
                 </div>
             </div>
         </section>
+        <section class="ikia-sec">
+            <div class="isec-left" onclick="window.open('https://space.bilibili.com/1633309157')">
+                <div class="isec-l1">零期生成员</div>
+                <div class="isec-l2">秋烟Ikia</div>
+            </div>
+            <div class="isec-right" onclick="window.open('https://www.bilibili.com/video/BV1j341137xT')">
+                <div class="isec-l1">第二次测试直播</div>
+                <div class="isec-l2">2022.5.28</div>
+            </div>
+        </section>
         <section class="sec-2">
             <div class="sec-2-tit">
                 近期动态
             </div>
             <div class="sec-2-lst">
+                <div class="sec-2-li">
+                    <div class="sec-2-lst-time">
+                        2022.7.30
+                    </div>
+                    <div class="sec-2-lst-desc">
+                        辻音 Rosely 翻唱作品 <i>There's a zombie on your lawn</i> 在 Bilibili 发布。
+                    </div>
+                </div>
                 <div class="sec-2-li">
                     <div class="sec-2-lst-time">
                         2022.7.29
@@ -118,6 +141,85 @@
                     </div>
                     <div class="sec-2-lst-desc">
                         一期生计划正式公布。
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-2">
+            <div class="sec-2-tit">
+                歌曲试听
+            </div>
+            <audio id="music-play" display="none"></audio>
+            <div id="music-list-choice">
+                <div class="sec-4-tabs">
+                    <div class="sec-4-tab" onclick="chmlist(1)">冰红/辻音</div>
+                    <div class="sec-4-tab" onclick="chmlist(2)">鹤鸣</div>
+                </div>
+                <div class="sec-4-lst">
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/稻香.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            稻香
+                        </div>
+                    </div>
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/一人行者.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            一人行者
+                        </div>
+                    </div>
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/爱你.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            爱你
+                        </div>
+                    </div>
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/夏天的风.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            夏天的风
+                        </div>
+                    </div>
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/Theres_a_zombie_on_your_lawn.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            There's a zombie on your lawn
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-4-lst" style="display:none;">
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/奇妙能力歌.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            奇妙能力歌
+                        </div>
+                    </div>
+                    <div class="sec-4-li">
+                        <svg onclick="document.getElementById('music-play').src='./music/再见.mp3';document.getElementById('music-play').play();" xmlns="http://www.w3.org/2000/svg" width="32" height=32 fill="currentColor" class="play-icon" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        </svg>
+                        <div class="sec-4-lst-desc">
+                            再见
+                        </div>
                     </div>
                 </div>
             </div>
@@ -230,4 +332,4 @@
             </div>
         </section>
     </body>
-</html>
+</html> 
